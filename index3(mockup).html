@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCG HUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 bg-blue-900 text-white z-50">
+        <nav class="flex items-center justify-between px-4 py-3">
+            <a href="index3(mockup).html" class="text-2xl font-bold text-green-400">TCG HUB</a>
+
+            <!-- BARRA DE BÚSQUEDA -->
+            <div class="flex-grow flex justify-center">
+                <form action="#" method="get"
+                    class="flex items-center bg-white rounded-full px-4 py-1 shadow-lg w-full max-w-xs md:max-w-lg">
+                    <select name="idioma" class="hidden md:block border-none text-gray-600 mr-2">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                        <option value="jp">JP</option>
+                        <option value="itl">ITL</option>
+                        <option value="al">AL</option>
+                    </select>
+                    <select name="tcg" class="hidden md:block border-none text-gray-600 mr-2">
+                        <option value="magic">Magic</option>
+                        <option value="yugioh">Yu-Gi-Oh!</option>
+                        <option value="pokemon">Pokémon</option>
+                        <option value="fleshblood">Flesh and Blood</option>
+                    </select>
+                    <input type="text" placeholder="Buscar cartas..." name="query"
+                        class="flex-grow bg-transparent focus:outline-none text-gray-600">
+                    <!-- LUPA -->
+                    <button type="submit" class="text-blue-600">
+                        <span class="material-icons">search</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="flex items-center space-x-4">
+
+                <!-- ICONOS -->
+                <ul class="hidden md:flex items-center space-x-4">
+                    <li><a href="#notificaciones" class="text-white"><span
+                                class="material-icons">notifications</span></a></li>
+                    <li><a href="./Login/login.html" class="text-white"><span class="material-icons">person</span></a>
+                    </li>
+                    <li><a href="#carrito" class="text-white"><span class="material-icons">shopping_cart</span></a></li>
+                    <li><a href="#contacto" class="text-white"><span class="material-icons">mail</span></a></li>
+                </ul>
+
+                <!-- MENU HAMBURGUESA -->
+                <button id="hamburger" class="md:hidden flex items-center space-x-2">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="pt-12">
+
+        <!-- NOVEDADES -->
+        <section id="novedades" class="h-screen bg-cover bg-center m-0 hidden lg:block"
+            style="background-image: url('IMG/nada.jpg');">
+        </section>
+
+
+        <!-- BEST SELLERS -->
+        <section id="best_sellers" class="py-12 bg-gray-50 text-center relative">
+            <h2 class="text-3xl font-semibold mb-8">BEST SELLERS</h2>
+            <div class="absolute inset-0 bg-cover bg-center opacity-40"></div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4 relative z-10">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition">
+                    <a href="Product_Details/productDetails2.html"><img src="IMG/nada.jpg" alt="Carta 1"
+                            class="w-full h-auto mx-auto"></a>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Zaxara the exemplary</h3>
+                        <button class="bg-blue-900 text-white py-2 px-4 rounded mt-4">Comprar</button>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition">
+                    <a href="Product_Details/productDetails2.html"><img src="IMG/nada.jpg" alt="Carta 2"
+                            class="w-full h-auto mx-auto"></a>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Hydroid Krasis</h3>
+                        <button class="bg-blue-900 text-white py-2 px-4 rounded mt-4">Comprar</button>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition">
+                    <a href="Product_Details/productDetails2.html"><img src="IMG/nada.jpg" alt="Carta 3"
+                            class="w-full h-auto mx-auto"></a>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Gargos Vicious Watcher</h3>
+                        <button class="bg-blue-900 text-white py-2 px-4 rounded mt-4">Comprar</button>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition">
+                    <a href="Product_Details/productDetails2.html"><img src="IMG/nada.jpg" alt="Carta 4"
+                            class="w-full h-auto mx-auto"></a>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Unbound Flourishing</h3>
+                        <button class="bg-blue-900 text-white py-2 px-4 rounded mt-4">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUSQUEDA AVANZADA -->
+        <section id="busqueda_avanzada" class="py-12">
+            <h2 class="text-3xl font-semibold text-center mb-8">ADVANCED SEARCH</h2>
+            <div class="flex flex-col md:flex-row ">
+                <div class="md:w-1/3 px-4 mb-8 md:mb-0">
+                    <img src="IMG/Captura de pantalla 2024-09-25 105720.png" alt="Imagen de columna izquierda"
+                        class="rounded-lg shadow-lg">
+                </div>
+                <!-- CARDS -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:w-2/3">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="IMG/nada.jpg" alt="Unstoppable Slasher" class="mx-auto">
+                        <div class="text-center mt-4">
+                            <h3 class="font-semibold">Unstoppable Slasher</h3>
+                            <p>Duskmourn: La casa de los horrores</p>
+                            <p>A partir de: <strong>€4.75</strong></p>
+                            <p class="text-green-600">Precio de mercado: <strong>€5.50</strong></p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="IMG/nada.jpg" alt="Unstoppable Slasher" class="mx-auto">
+                        <div class="text-center mt-4">
+                            <h3 class="font-semibold">Unstoppable Slasher</h3>
+                            <p>Duskmourn: La casa de los horrores</p>
+                            <p>A partir de: <strong>€4.75</strong></p>
+                            <p class="text-green-600">Precio de mercado: <strong>€5.50</strong></p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="IMG/nada.jpg" alt="Unstoppable Slasher" class="mx-auto">
+                        <div class="text-center mt-4">
+                            <h3 class="font-semibold">Unstoppable Slasher</h3>
+                            <p>Duskmourn: La casa de los horrores</p>
+                            <p>A partir de: <strong>€4.75</strong></p>
+                            <p class="text-green-600">Precio de mercado: <strong>€5.50</strong></p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="IMG/nada.jpg" alt="Unstoppable Slasher" class="mx-auto">
+                        <div class="text-center mt-4">
+                            <h3 class="font-semibold">Unstoppable Slasher</h3>
+                            <p>Duskmourn: La casa de los horrores</p>
+                            <p>A partir de: <strong>€4.75</strong></p>
+                            <p class="text-green-600">Precio de mercado: <strong>€5.50</strong></p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="IMG/nada.jpg" alt="Unstoppable Slasher" class="mx-auto">
+                        <div class="text-center mt-4">
+                            <h3 class="font-semibold">Unstoppable Slasher</h3>
+                            <p>Duskmourn: La casa de los horrores</p>
+                            <p>A partir de: <strong>€4.75</strong></p>
+                            <p class="text-green-600">Precio de mercado: <strong>€5.50</strong></p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="IMG/nada.jpg" alt="Unstoppable Slasher" class="mx-auto">
+                        <div class="text-center mt-4">
+                            <h3 class="font-semibold">Unstoppable Slasher</h3>
+                            <p>Duskmourn: La casa de los horrores</p>
+                            <p>A partir de: <strong>€4.75</strong></p>
+                            <p class="text-green-600">Precio de mercado: <strong>€5.50</strong></p>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="IMG/nada.jpg" alt="Unstoppable Slasher" class="mx-auto">
+                        <div class="text-center mt-4">
+                            <h3 class="font-semibold">Unstoppable Slasher</h3>
+                            <p>Duskmourn: La casa de los horrores</p>
+                            <p>A partir de: <strong>€4.75</strong></p>
+                            <p class="text-green-600">Precio de mercado: <strong>€5.50</strong></p>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="IMG/nada.jpg" alt="Unstoppable Slasher" class="mx-auto">
+                        <div class="text-center mt-4">
+                            <h3 class="font-semibold">Unstoppable Slasher</h3>
+                            <p>Duskmourn: La casa de los horrores</p>
+                            <p>A partir de: <strong>€4.75</strong></p>
+                            <p class="text-green-600">Precio de mercado: <strong>€5.50</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESORIOS -->
+        <section id="accesories" class="py-10 text-center">
+            <h2 class="text-3xl font-semibold mb-2">TAKE A LOOK AT OUR ACCESORIES</h2>
+            <div class="flex flex-col sm:flex-row justify-center space-x-0 sm:space-x-8 items-center">
+                <img src="IMG/nada.jpg" class="w-32 sm:w-48 md:w-64 h-64"></img>
+                <img src="IMG/nada.jpg" class="w-32 sm:w-48 md:w-64 h-64 my-4 mx-5"></img>
+                <img src="IMG/nada.jpg" class="w-32 sm:w-48 md:w-64 h-64"></img>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-between px-4">
+
+            <!-- About Us Section -->
+            <div class="w-full sm:w-1/2 md:w-auto flex flex-col items-center sm:items-start">
+                <h3 class="text-lg font-semibold text-green-400"><a href="About_us/aboutus(mockup).html">About us</a></h3>
+                <ul>
+                    <li>Our Team</li>
+                    <li>Work With Us</li>
+                </ul>
+            </div>
+
+            <!-- HELP -->
+            <div class="w-full sm:w-1/2 md:w-auto flex flex-col items-center sm:items-start">
+                <h3 class="text-lg font-semibold text-green-400"><a href="">Help</a></h3>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#envios">Delivery</a></li>
+                    <li><a href="#devoluciones">Refunds</a></li>
+                    <li><a href="#contacto">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="w-full sm:w-1/2 md:w-auto flex flex-col items-center sm:items-start">
+                <h3 class="text-lg font-semibold text-green-400"><a href="">Social Media</a></h3>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-white"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#" class="text-white"><i class="fa fa-facebook-official"></i></a></li>
+                    <li><a href="#" class="text-white"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" class="text-white"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- LEGAL -->
+            <div class="w-full sm:w-1/2 md:w-auto flex flex-col items-center sm:items-start">
+                <h3 class="text-lg font-semibold text-green-400">Legal</h3>
+                <ul>
+                    <li><a href="#terminos">Terms & Conditions</a></li>
+                    <li><a href="#privacidad">Privacy Policy</a></li>
+                    <li><a href="#cookies">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

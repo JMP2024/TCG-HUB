@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCG HUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-white text-gray-800">
+   <!-- HEADER -->
+<header class="fixed w-full top-0 bg-blue-900 text-white z-50">
+    <nav class="flex items-center justify-between px-4 py-3">
+        <a href="index3.html" class="text-2xl font-bold text-green-400">TCG HUB</a>
+
+        <!-- BARRA DE BÚSQUEDA -->
+        <div class="flex-grow flex justify-center">
+            <form action="#" method="get" class="flex items-center bg-white rounded-full px-4 py-1 shadow-lg w-full max-w-xs md:max-w-lg">
+                <select name="idioma" class="hidden md:block border-none text-gray-600 mr-2">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                    <option value="jp">JP</option>
+                    <option value="itl">ITL</option>
+                    <option value="al">AL</option>
+                </select>
+                <select name="tcg" class="hidden md:block border-none text-gray-600 mr-2">
+                    <option value="magic">Magic</option>
+                    <option value="yugioh">Yu-Gi-Oh!</option>
+                    <option value="pokemon">Pokémon</option>
+                    <option value="fleshblood">Flesh and Blood</option>
+                </select>
+                <input type="text" placeholder="Buscar cartas..." name="query" class="flex-grow bg-transparent focus:outline-none text-gray-600">
+                <!-- LUPA -->
+                <button type="submit" class="text-blue-600">
+                    <span class="material-icons">search</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="flex items-center space-x-4">
+
+            <!-- ICONOS -->
+            <ul class="hidden md:flex items-center space-x-4">
+                <li><a href="#notificaciones" class="text-white"><span class="material-icons">notifications</span></a></li>
+                <li><a href="./Login/login.html" class="text-white"><span class="material-icons">person</span></a></li>
+                <li><a href="#carrito" class="text-white"><span class="material-icons">shopping_cart</span></a></li>
+                <li><a href="#contacto" class="text-white"><span class="material-icons">mail</span></a></li>
+            </ul>
+
+            <!-- MENU HAMBURGUESA -->
+            <button id="hamburger" class="md:hidden flex items-center space-x-2">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+    </nav>
+</header>
+<!-- MAIN -->
+<main class="container mx-auto p-10 sm:p-8 md:p-16 pt-24 pb-10 sm:pb-16 md:pb-24"> 
+    <!-- CARD Y GRÁFICA -->
+    <div class="flex flex-col sm:flex-row">
+        <!-- CARD -->
+        <div class="w-full sm:w-1/4 mb-6 sm:mb-0">
+            <img src="../IMG/hydra1.png" alt="Card Image" class="rounded-lg w-1/2 sm:w-full mx-auto">
+            <h2 class="mt-4 text-lg font-bold text-center sm:text-left">Zaxara, the Exemplary</h2>
+        </div>
+
+        <!-- GRÁFICA -->
+        <div class="w-full sm:w-2/3 sm:pl-6">
+            <div class="bg-white rounded-lg p-4 shadow-md">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-semibold">Price History</h3>
+                </div>
+                <div class="mt-4">
+                    <img src="../IMG/grafica.png" alt="Graph" class="w-full rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VENDEDORES -->
+    <section class="mt-6">
+        <h2 class="text-2xl font-semibold mb-4">Sellers List</h2>
+        <div class="overflow-x-auto bg-white rounded-lg shadow-md">
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b">Sellers</th>
+                        <th class="py-2 px-4 border-b">Product Info</th>
+                        <th class="py-2 px-4 border-b">Offer</th>
+                        <th class="py-2 px-4 border-b">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b text-center">Fufufuster33</td>
+                        <td class="py-2 px-4 border-b text-center"><span class="bg-red-500 text-white px-2 py-1 rounded">PR</span></td>
+                        <td class="py-2 px-4 border-b text-center">1</td>
+                        <td class="py-2 px-4 border-b text-center">1,1€</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b text-center">Juanete</td>
+                        <td class="py-2 px-4 border-b text-center"><span class="bg-yellow-300 text-white px-2 py-1 rounded">PR</span></td>
+                        <td class="py-2 px-4 border-b text-center">12</td>
+                        <td class="py-2 px-4 border-b text-center">1,2€</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b text-center">RosaMelano</td>
+                        <td class="py-2 px-4 border-b text-center"><span class="bg-yellow-500 text-white px-2 py-1 rounded">PR</span></td>
+                        <td class="py-2 px-4 border-b text-center">3</td>
+                        <td class="py-2 px-4 border-b text-center">1,3€</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b text-center">XXXhabibiXXX</td>
+                        <td class="py-2 px-4 border-b text-center"><span class="bg-green-300 text-white px-2 py-1 rounded">PR</span></td>
+                        <td class="py-2 px-4 border-b text-center">2</td>
+                        <td class="py-2 px-4 border-b text-center">2,1€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FILTRO -->
+    <aside class="mt-6">
+        <h3 class="text-lg font-semibold">Filtros</h3>
+        <div class="bg-white p-4 rounded-lg shadow-md space-y-4">
+            <div>
+                <h4 class="font-semibold">Precio</h4>
+                <input type="range" min="1" max="100" class="w-full mt-2">
+            </div>
+            <div>
+                <h4 class="font-semibold">Estado</h4>
+                <div class="space-y-2">
+                    <label><input type="checkbox" class="mr-2"> Near Mint</label><br>
+                    <label><input type="checkbox" class="mr-2"> Moderately Played</label><br>
+                    <label><input type="checkbox" class="mr-2"> Played</label><br>
+                    <label><input type="checkbox" class="mr-2"> Heavily Played</label>
+                </div>
+            </div>
+            <button class="bg-blue-700 text-white px-4 py-2 rounded w-full">Limpiar filtros</button>
+        </div>
+    </aside>
+</main>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-between px-4">
+    
+            <!-- About Us Section -->
+            <div class="w-full sm:w-1/2 md:w-auto flex flex-col items-center sm:items-start">
+                <h3 class="text-lg font-semibold text-green-400"><a href="About_us/aboutus2.html">About us</a></h3>
+                <ul>
+                    <li>Our Team</li>
+                    <li>Work With Us</li>
+                </ul>
+            </div>
+    
+            <!-- HELP -->
+            <div class="w-full sm:w-1/2 md:w-auto flex flex-col items-center sm:items-start">
+                <h3 class="text-lg font-semibold text-green-400"><a href="">Help</a></h3>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#envios">Delivery</a></li>
+                    <li><a href="#devoluciones">Refunds</a></li>
+                    <li><a href="#contacto">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- SOCIAL MEDIA -->
+            <div class="w-full sm:w-1/2 md:w-auto flex flex-col items-center sm:items-start">
+                <h3 class="text-lg font-semibold text-green-400"><a href="">Social Media</a></h3>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-white"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#" class="text-white"><i class="fa fa-facebook-official"></i></a></li> 
+                    <li><a href="#" class="text-white"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" class="text-white"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+    
+            <!-- LEGAL -->
+            <div class="w-full sm:w-1/2 md:w-auto flex flex-col items-center sm:items-start">
+                <h3 class="text-lg font-semibold text-green-400">Legal</h3>
+                <ul>
+                    <li><a href="#terminos">Terms & Conditions</a></li>
+                    <li><a href="#privacidad">Privacy Policy</a></li>
+                    <li><a href="#cookies">Cookies Policy</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    </footer>
+    </body>
+    </html>
